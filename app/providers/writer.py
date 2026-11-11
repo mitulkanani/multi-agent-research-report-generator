@@ -5,7 +5,7 @@ from app.models.schemas import ResearchReport, SourceRecord
 
 
 class DemoReportWriter:
-    """Deterministic writer for tests and demos; it does not invent factual claims."""
+    """Deterministic writer for tests and demos; it does not invent factual new claims."""
 
     def write(
         self,
