@@ -1,0 +1,14 @@
+services:
+  research-api:
+    build: .
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    environment:
+      DATABASE_PATH: /data/research_runs.sqlite3
+    volumes:
+      - research-data:/data
+    restart: unless-stopped
+volumes:
+  research-data:

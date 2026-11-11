@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Research Studio</title><link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <header class="topbar"><div class="brand-mark">R</div><div><strong>Research Studio</strong><span>Multi-agent research workspace</span></div><span class="top-tag">LANGGRAPH WORKFLOW</span></header>
+  <main class="layout">
+    <section class="hero"><div class="eyebrow">RESEARCH, SYNTHESIZED</div><h1>Turn complex questions<br><em>into cited research.</em></h1><p>Specialized agents gather evidence, challenge coverage, and assemble a report you can inspect and verify.</p></section>
+    <section class="composer panel">
+      <label for="topic">What do you want to research?</label>
+      <textarea id="topic" rows="3" placeholder="e.g. Enterprise adoption of retrieval-augmented generation systems"></textarea>
+      <div class="form-grid"><div><label for="audience">Report audience</label><input id="audience" value="Technology leadership"></div><div><label for="questions">Focus questions (one per line)</label><textarea id="questions" rows="3" placeholder="What are the main architectures?&#10;How is quality measured?"></textarea></div></div>
+      <div class="actions"><span class="helper">Demo mode uses synthetic sources; configure Tavily for live web research.</span><button id="run">Start research <span>↗</span></button></div>
+      <div id="status" class="status" aria-live="polite"></div>
+    </section>
+    <section id="result" class="result hidden">
+      <div class="result-head"><div><div class="eyebrow">RESEARCH OUTPUT</div><h2 id="report-title">Research report</h2></div><a id="download" class="download" href="#" target="_blank">Download Markdown ↗</a></div>
+      <div class="metrics"><div class="metric"><span>Sources</span><strong id="source-count">—</strong></div><div class="metric"><span>Domains</span><strong id="domain-count">—</strong></div><div class="metric"><span>Coverage signal</span><strong id="coverage">—</strong></div><div class="metric"><span>Workflow</span><strong id="engine">—</strong></div></div>
+      <div class="two-col"><article class="panel"><h3>Executive summary</h3><p id="summary"></p><h3>Critic notes</h3><ul id="critique"></ul><h3>Agent activity</h3><div id="agents" class="agents"></div></article><article class="panel"><h3>Evidence ledger</h3><div id="sources" class="sources"></div></article></div>
+      <article class="panel report-panel"><h3>Generated report</h3><pre id="markdown"></pre></article>
+      <p class="disclaimer">Research assistant output is not a substitute for opening primary sources and independently validating important claims. Demo sources are synthetic.</p>
+    </section>
+    <footer>Built with FastAPI, LangGraph, Tavily and OpenAI adapters · Human review recommended</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body></html>

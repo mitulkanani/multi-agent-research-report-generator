@@ -1,0 +1,10 @@
+{
+  "topic": "Enterprise adoption of retrieval-augmented generation systems",
+  "audience": "Technology leadership",
+  "focus_questions": [
+    "What production architectures are commonly used?",
+    "How do teams evaluate retrieval quality and factuality?",
+    "What operational and security risks should teams consider?"
+  ],
+  "max_results_per_agent": 5
+}
